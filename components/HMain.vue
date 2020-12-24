@@ -1,7 +1,8 @@
 <template>
   <header class="pt-3">
     <div class="d-block">
-      <h-navbar></h-navbar>
+      <h-navbar />
+      <h-jumbotron />
     </div>
   </header>
 </template>
