@@ -27,7 +27,7 @@
               <i class="far fa-user"></i>
               <span>کاربر عزیز:</span>
               <button @click="setAuth" class="btn btn-link p-0">
-                {{ headerData.auth.name }}
+                {{ navbarData.auth.name }}
               </button>
               <span>خوش آمدید...</span>
             </div>
@@ -44,7 +44,7 @@
         <!-- منوها در حالت دسکتاپ -->
         <div
           class="d-md-block d-none bg-dark p-2 rounded-bottom text-right"
-          v-for="(m, index) in headerData.menu"
+          v-for="(m, index) in navbarData.menu"
           :key="index"
         >
           <nuxt-link class="text-light px-4" :to="m.path" v-text="m.name"></nuxt-link>
@@ -58,7 +58,7 @@
           <!-- منوها در حالت موبایل -->
           <div
             class="px-3 mb-3"
-            v-for="(m, index) in headerData.menu"
+            v-for="(m, index) in navbarData.menu"
             :key="index"
           >
             <nuxt-link :to="m.path" v-text="m.name"></nuxt-link>
@@ -92,7 +92,7 @@ export default {
   },
   computed: {
     ...mapGetters("navbar", {
-      headerData: "getData",
+      navbarData: "getData",
     }),
   },
 };
