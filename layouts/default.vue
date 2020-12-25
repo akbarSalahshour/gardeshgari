@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h-main></h-main>
+    <h-main/>
     <Nuxt />
+    <f-main/>
   </div>
 </template>
 
