@@ -1,5 +1,5 @@
 <template>
-  <header class="pt-3">
+  <header>
     <div class="d-block">
       <h-navbar />
       <h-jumbotron />
@@ -14,9 +14,10 @@ header {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vw;
-  max-height: 90vh;
-  min-height: 300px;
+  padding: {
+      bottom: 100px;
+      top: 20px
+  }
   & > div{
       padding:0 1rem;
       max-width:1200px;

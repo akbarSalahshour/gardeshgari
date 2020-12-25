@@ -4,8 +4,51 @@
 
 body{
     direction: rtl;
+    text-align: right;
+    .container{
+        overflow: hidden;
+    }
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
 }
 
 
+.cpo{
+    cursor: pointer !important;
+}
+
+.outline-none{
+    outline: none !important;
+}
+.border-none{
+    border:none ;
+}
+@include font-size();
+@include font-weight();
+@include rounded();
+@each $index , $breakpoint in $breakpoint-default {
+    @media screen and #{$breakpoint}{
+        @include font-size($index);
+    }
+}
+
+
+.line{
+    width: 100%;
+    height: 1px;
+    position: relative;
+    .on-line{
+        height: 3px;
+        position: absolute;
+        top: -1px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
 
 
